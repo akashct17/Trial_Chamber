@@ -1,12 +1,54 @@
 # 🎮 Trial Chamber
 
-Trial Chamber is my first 2D platformer game developed using the **Godot Engine** and **GDScript**. This project was created to learn the fundamentals of 2D game development, including player movement, physics, enemy AI, collisions, animations, and scene management.
+Trial Chamber is my first 2D platformer game developed using the **Godot Engine** and **GDScript**. This project was created to learn the fundamentals of 2D game development, including player movement, physics, collisions, enemy behaviors, animations, reusable components, and scene management.
 
 ---
 
 ## 📖 About the Game
 
-Fight your way through challenging chambers filled with enemies and obstacles. Defeat enemies, avoid hazards, and make your way to the end of each level.
+Fight your way through challenging chambers filled with enemies, obstacles, and hazards. Progress through multiple levels, overcome increasingly difficult challenges, and defeat the final boss to complete the Trial Chamber.
+
+---
+
+# 📸 Screenshots
+
+## 🏠 Home Menu
+
+<p align="center">
+  <img src="./images/home.png" alt="Home Menu" width="900">
+</p>
+
+The starting point of the adventure where players can begin their journey.
+
+---
+
+## 🎮 Level 1
+
+<p align="center">
+  <img src="./images/level1.png" alt="Level 1" width="900">
+</p>
+
+Learn the core mechanics while avoiding hazards and defeating enemies.
+
+---
+
+## 🎮 Level 2
+
+<p align="center">
+  <img src="./images/level2.png" alt="Level 2" width="900">
+</p>
+
+Face stronger enemies and more challenging platforming sections as the difficulty increases.
+
+---
+
+## 👹 Level 3 — Boss Battle
+
+<p align="center">
+  <img src="./images/level3.png" alt="Boss Battle" width="900">
+</p>
+
+Enter the final chamber and battle the boss. Dodge attacks, survive the encounter, and complete the Trial Chamber.
 
 ---
 
@@ -14,13 +56,15 @@ Fight your way through challenging chambers filled with enemies and obstacles. D
 
 - 2D Platformer Gameplay
 - Smooth Player Movement
-- Jump Mechanics
-- Enemy AI
-- Collision Detection
+- Physics-Based Jump Mechanics
+- Custom Enemy Behaviors (Bee, Slime & Boss)
+- Collision Detection System
 - Animated Characters
 - Health System
-- Enemy Detection
-- Scene Management
+- Enemy Detection System
+- Multiple Levels
+- Boss Battle
+- Scene Transitions
 - Background Music & Sound Effects
 - Win & Game Over Screens
 
@@ -38,30 +82,37 @@ Fight your way through challenging chambers filled with enemies and obstacles. D
 
 ```text
 assets/       - Sprites, textures, audio and game resources
-scenes/       - Levels, enemies and game scenes
+images/       - README screenshots
+scenes/       - Game scenes and levels
 scripts/      - GDScript source files
 project.godot - Godot project configuration
+README.md     - Project documentation
 ```
 
 ---
 
 ## 🧩 Components Developed
 
-During this project, I created reusable game components with their own scripts and behaviors, including:
+During this project, I designed reusable game components, each with its own dedicated GDScript to manage specific behaviors.
 
-- Player Character
-- Bee Enemy
-- Slime Enemy
-- Boss Character
+### Gameplay Components
+
+- Player Controller
+- Bee Enemy Component
+- Slime Enemy Component
+- Boss Enemy Component
+
+### Game Systems
+
 - Health System
+- Collision Detection System
 - Enemy Detection System
-- Collision System
-- UI Components
-- Scene Transitions
-- Collectibles
 - Camera System
+- Collectible System
+- Scene Transition System
+- UI Components
 
-Each component was designed with its own GDScript, allowing different game objects to have independent behavior while keeping the project organized and easier to maintain.
+Using separate scripts for each component helped keep the project modular, organized, and easier to maintain while allowing every game object to have its own independent behavior.
 
 ---
 
@@ -75,6 +126,7 @@ Throughout this project, I learned and implemented:
 - Area2D
 - CollisionShape2D
 - AnimatedSprite2D
+- AnimationPlayer
 - TileMaps
 - Signals
 - Timers
@@ -82,9 +134,9 @@ Throughout this project, I learned and implemented:
 - Physics & Gravity
 - Input Handling
 - Collision Layers & Masks
-- Enemy AI
 - State-Based Logic
 - Component-Based Game Design
+- Enemy Behaviors
 - UI Design
 - Audio Integration
 - Scene Management
@@ -101,55 +153,13 @@ Throughout this project, I learned and implemented:
 | Mouse | Navigate menus and select buttons |
 
 ---
----
-
-## 📸 Screenshots
-
-### 🏠 Home Menu
-
-<p align="center">
-<img src="./images/Screenshot 2026-07-03 171128.png">
-</p>
-
-The main menu where the adventure begins.
-
----
-
-### 🎮 Level 1
-
-<p align="center">
-<img src="./images/Screenshot 2026-07-03 171210.png" width="900">
-</p>
-
-Navigate through obstacles while avoiding enemies and hazards.
-
----
-
-### 👾 Level 2
-
-<p align="center">
-<img src="images/Screenshot 2026-07-03 171310.png" width="900">
-</p>
-
-Face more challenging enemies and progress toward the boss chamber.
-
----
-### 👹 Level 3
-
-<p align="center">
-<img src="./images/Screenshot 2026-07-03 171430.png" width="900">
-</p>
-
-Enter the final chamber and take on the boss. Use everything you've learned to dodge attacks, survive the encounter, and complete the Trial Chamber.
 
 ## ▶️ How to Play
 
-### Playing the Game
-
 1. Download **Trial_Chamber.zip** from the **Releases** section.
 2. Extract the ZIP file.
-3. Run **Trial_Chamber.exe** (or **Game.exe**, depending on the release).
-4. Defeat enemies, avoid hazards, and complete each chamber.
+3. Launch **Trial_Chamber.exe** (or **Game.exe**, depending on the release).
+4. Progress through each chamber by avoiding hazards, defeating enemies, and reaching the final boss.
 
 ---
 
@@ -157,21 +167,17 @@ Enter the final chamber and take on the boss. Use everything you've learned to d
 
 This repository contains the complete Godot project.
 
-The ZIP file includes all project components required to open, explore, and modify the game using **Godot 4**, including:
-
-- Scripts
-- Scenes
-- Assets
-- Components
-- Project Resources
+The included **Trial_Chamber.zip** archive contains the original project files, allowing the project to be opened, explored, modified, and rebuilt using **Godot 4**.
 
 ---
 
 ## 📈 Learning Outcome
 
-Trial Chamber represents the beginning of my game development journey. While I used tutorials to learn the fundamentals of Godot, I customized, debugged, and expanded many parts of the project to deepen my understanding.
+Trial Chamber marks the beginning of my game development journey with Godot.
 
-Through this project, I learned how to structure a game using reusable components, write dedicated scripts for different game objects such as the **Player**, **Bee**, **Slime**, and **Boss**, implement physics and collision systems, manage scenes, and export a complete Windows game. This experience provided a solid foundation for building more original and advanced games in the future.
+Although I initially followed tutorials to understand the fundamentals, I independently customized gameplay mechanics, debugged issues, and implemented reusable components for different game objects such as the **Player**, **Bee**, **Slime**, and **Boss**. Throughout the project, I gained practical experience with **GDScript**, physics, collision systems, animations, reusable scripting, scene management, UI design, and exporting a complete Windows game.
+
+This project gave me a strong foundation in game development and has motivated me to continue building more original and advanced games in the future.
 
 ---
 
@@ -180,4 +186,6 @@ Through this project, I learned how to structure a game using reusable component
 **Akash C T**
 
 B.Tech AI & ML Student  
- 
+Aspiring Game Developer | AI & Software Enthusiast
+
+⭐ If you enjoyed the project, consider giving the repository a star!
